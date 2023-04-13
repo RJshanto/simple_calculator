@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+        <div class="display">
+            <input type="text"  id="inputbox" placeholder="0">
+        </div>
+    
+
+
+<div>
+    <button onclick="clearnum()" id="oparator">AC</button>
+    <button onclick="deletenum()" id="oparator">DE</button>
+    <button onclick="show('.')" id="oparator">.</button>
+    <button onclick="show('/')" id="oparator">/</button>
+</div>
+<div>
+    <button onclick="show('7')">7</button>
+    <button onclick="show('8')">8</button>
+    <button onclick="show('9')">9</button>
+    <button onclick="show('*')" id="oparator">x</button>
+</div>
+<div>
+    <button onclick="show('4')">4</button>
+    <button onclick="show('5')">5</button>
+    <button onclick="show('6')">6</button>
+    <button onclick="show('-')" id="oparator">-</button>
+</div>
+<div>
+    <button onclick="show('1')">1</button>
+    <button onclick="show('2')">2</button>
+    <button onclick="show('3')">3</button>
+    <button onclick="show('+')" id="oparator">+</button>
+</div>
+<div>
+    <button onclick="show('00')">00</button>
+    <button onclick="show('0')">0</button>
+    <button onclick="calculate()" id="equal">=</button>
+ 
+</div>
+
+</div>
+</div>
+
+<script>
+     
+     let inputscreen =document.getElementById('inputbox');   // here i catched the input file ...
+     
+     function show(number){
+         inputscreen.value +=number ;        // adding every value by clicking one by one ...
+     }
+
+     function clearnum(){
+        inputscreen.value =" ";             // clear button manupulate
+     }
+     
+     function deletenum(){
+        inputscreen.value =inputscreen.value.toString().slice(0,-1);   // deleteing value one by one ...
+     }
+      
+     function calculate(){
+        inputscreen.value = eval(inputscreen.value);       // calculate value using inbuild function eval()....
+     }
+
+     // hey this is shanto signeture style .....
+
+</script>
+
+</body>
+</html>
